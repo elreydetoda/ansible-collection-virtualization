@@ -12,7 +12,7 @@
         ) or
         ( ansible_distribution == "Debian" and ( ansible_distribution_major_version == "9" or ansible_distribution_major_version == "10" )
         ) or
-        ( ansible_distribution == "Ubuntu" and ( ansible_distribution_version == "18.04" )
+        ( ansible_distribution == "Ubuntu" and ( ansible_distribution_version in ["18.04","20.04","22.04"] )
         )
       - ansible_virtualization_role == "guest"
 
