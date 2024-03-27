@@ -17,13 +17,13 @@
       - ansible_virtualization_role == "guest"
 
 # VirtualBox
-- include: VirtualBox.yml
+- include_tasks: VirtualBox.yml
   when: ansible_virtualization_type == "virtualbox"
 
 # VMware
-- include: VMware.yml
+- include_tasks: VMware.yml
   when: ansible_virtualization_type == "vmware"
 
 # KVM
-- include: KVM.yml
+- include_tasks: KVM.yml
   when: ansible_virtualization_type == "kvm"
