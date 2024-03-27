@@ -2,12 +2,12 @@
 # tasks file for vmvagrant
 
 # Virtualization and vagrant setup
-- include: disable-ipv6.yml     # Disable IPv6
-- include: sudoers.yml          # Setup sudoers file
-- include: hosts.yml            # Update /etc/hosts
-- include: vagrant.yml          # Create vagrant SSH key
-- include: sshd.yml             # Setup sshd
-- include: network.yml          # Network fixes
+- include_tasks: disable-ipv6.yml # Disable IPv6
+- include_tasks: sudoers.yml # Setup sudoers file
+- include_tasks: hosts.yml # Update /etc/hosts
+- include_tasks: vagrant.yml # Create vagrant SSH key
+- include_tasks: sshd.yml # Setup sshd
+- include_tasks: network.yml # Network fixes
 
 # Cleanup
-- include: cleanup.yml          # Cleanup
+- include_tasks: cleanup.yml # Cleanup
